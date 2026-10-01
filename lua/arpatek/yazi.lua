@@ -1,6 +1,6 @@
 -- ┌──────────────────────────────────────────────────────────────┐
 -- │ arpatek - yazi as the file explorer                          │
--- │ No plugin. A floating terminal and yazi's --chooser-file.     │
+-- │ No plugin. A floating terminal and yazi's --chooser-file.    │
 -- └──────────────────────────────────────────────────────────────┘
 --
 -- yazi is already in the Brewfile, so the editor does not need its own file

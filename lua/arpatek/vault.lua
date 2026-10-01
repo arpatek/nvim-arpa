@@ -1,7 +1,7 @@
 -- ┌──────────────────────────────────────────────────────────────┐
 -- │ arpatek - Vault buffers                                      │
--- │ Secrets in plaintext get no language server and no disk       │
--- │ artifacts.                                                    │
+-- │ Secrets in plaintext get no language server and no disk      │
+-- │ artifacts.                                                   │
 -- └──────────────────────────────────────────────────────────────┘
 --
 -- `ansible-vault edit` decrypts into ~/.ansible/tmp/ansible-local-*/tmp*.yml,

@@ -1,7 +1,7 @@
 -- ┌──────────────────────────────────────────────────────────────┐
 -- │ arpatek - LSP                                                │
--- │ vim.lsp.config + vim.lsp.enable, built in since nvim 0.11.    │
--- │ No nvim-lspconfig. No mason. Servers come from the Brewfile.  │
+-- │ vim.lsp.config + vim.lsp.enable, built in since nvim 0.11.   │
+-- │ No nvim-lspconfig. No mason. Servers come from the Brewfile. │
 -- └──────────────────────────────────────────────────────────────┘
 --
 -- Server definitions are one file each under ../../lsp/. nvim finds them on

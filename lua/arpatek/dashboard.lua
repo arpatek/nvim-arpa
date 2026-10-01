@@ -1,7 +1,7 @@
 -- ┌──────────────────────────────────────────────────────────────┐
 -- │ arpatek - Startup screen                                     │
--- │ No plugin. A scratch buffer, highlight groups and one          │
--- │ VimEnter autocmd.                                             │
+-- │ No plugin. A scratch buffer, highlight groups and one        │
+-- │ VimEnter autocmd.                                            │
 -- └──────────────────────────────────────────────────────────────┘
 --
 -- Banner and gradient come from arpatek.dev's curl output

@@ -1,6 +1,6 @@
 -- ┌──────────────────────────────────────────────────────────────┐
 -- │ arpatek - Finder                                             │
--- │ fzf-lua, configured on first use instead of at startup.       │
+-- │ fzf-lua, configured on first use instead of at startup.      │
 -- └──────────────────────────────────────────────────────────────┘
 --
 -- vim.pack has no lazy-loading, so anything expensive has to defer itself.

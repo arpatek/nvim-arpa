@@ -1,6 +1,6 @@
 -- ┌──────────────────────────────────────────────────────────────┐
 -- │ arpatek - Statusline                                         │
--- │ No lualine. One function, evaluated on redraw.                │
+-- │ No lualine. One function, evaluated on redraw.               │
 -- └──────────────────────────────────────────────────────────────┘
 
 local M = {}
