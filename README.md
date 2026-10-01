@@ -63,21 +63,24 @@ than an error.
 
 ### Install
 
-Runs alongside an existing config — nothing in `~/.config/nvim` is touched.
-
 ```sh
-git clone https://codeberg.org/arpatek/nvim-arpatek ~/.config/nvim-arpatek
-NVIM_APPNAME=nvim-arpatek nvim
+git clone https://codeberg.org/arpatek/nvim-arpatek ~/.config/nvim
+nvim
 ```
 
 First launch clones eight plugins and compiles 23 treesitter parsers. Every launch
 after that is about 35 ms.
 
-To make it the default, alias it:
+To try it without disturbing an existing config, clone it elsewhere and point
+`NVIM_APPNAME` at the directory name instead:
 
 ```sh
-alias nvim='NVIM_APPNAME=nvim-arpatek nvim'
+git clone https://codeberg.org/arpatek/nvim-arpatek ~/.config/nvim-test
+NVIM_APPNAME=nvim-test nvim
 ```
+
+Note that plugins and treesitter parsers live under `stdpath('data')`, which
+`NVIM_APPNAME` also changes — so a side-by-side clone fetches its own copies.
 
 ---
 

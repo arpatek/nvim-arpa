@@ -132,7 +132,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- ──[ Filetype Detection ]─────────────────────────────────────────────────────
 -- nvim ships no rule that distinguishes Ansible YAML from ordinary YAML, so
 -- without this the ansible language server never attaches and you get generic
--- YAML diagnostics on a playbook. LazyVim solved this with nvim-ansible; the
+-- YAML diagnostics on a playbook. The nvim-ansible plugin exists for this; the
 -- rules themselves are short enough to own.
 vim.filetype.add({
     filename = {

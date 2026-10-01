@@ -21,8 +21,8 @@ It resolves to the `json` parser. Listing it produces
 ## Parsers are per-`NVIM_APPNAME`
 
 They install to `stdpath('data')/site/parser`, which `NVIM_APPNAME` changes.
-Parsers compiled under the LazyVim config are invisible here; this config
-built its own 23. Expect a few minutes on first launch.
+A side-by-side clone under a different `NVIM_APPNAME` therefore compiles its
+own copies rather than reusing these. Expect a few minutes on first launch.
 
 ## HCL formatting needs a terraform or tofu binary
 
@@ -172,8 +172,14 @@ shorter than that — a 24x10 terminal is a 24x8 window — it does not fit and
 scrolls. Nothing to be done short of dropping entries, and `:DashboardInfo`
 reports the window size and which thresholds applied.
 
-## LazyVim is untouched
+## Removing it
 
-It remains at `~/.config/nvim` and runs on a bare `nvim`. This config only
-runs under `NVIM_APPNAME=nvim-arpatek`. Removing it is
-`rm -rf ~/.config/nvim-arpatek ~/.local/share/nvim-arpatek ~/.local/state/nvim-arpatek`.
+```sh
+rm -rf ~/.config/nvim ~/.local/share/nvim ~/.local/state/nvim ~/.cache/nvim
+```
+
+`~/.local/state/nvim/undo/` can end up owned by root if `sudo nvim` ever wrote
+an undo file there, in which case the plain `rm` fails partway and
+`undofile` silently stops working for every buffer. Check with
+`ls -la ~/.local/state/nvim/undo` before assuming persistent undo is broken for
+some subtler reason.

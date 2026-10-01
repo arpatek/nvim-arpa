@@ -1,8 +1,8 @@
 # Architecture
 
 Neovim config targeting **0.12+**, built on built-ins rather than the plugin
-stack a distro would pull in. Runs alongside an existing config via
-`NVIM_APPNAME`.
+stack a distro would pull in. Installs to `~/.config/nvim`; set `NVIM_APPNAME`
+to a different directory name to run it side by side with another config.
 
 ```
 ~/.config/nvim-arpatek/

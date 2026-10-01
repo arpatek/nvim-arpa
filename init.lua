@@ -4,8 +4,9 @@
 -- │ built-in LSP config (vim.lsp.config) and LSP completion.     │
 -- └──────────────────────────────────────────────────────────────┘
 --
--- Run alongside an existing config:  NVIM_APPNAME=nvim-arpatek nvim
--- Plugin lockfile lives at:          $XDG_CONFIG_HOME/nvim-arpatek/nvim-pack-lock.json
+-- Installs to ~/.config/nvim. To run it side by side with another config,
+-- clone it elsewhere and set NVIM_APPNAME to that directory name.
+-- Plugin lockfile lives next to this file, as nvim-pack-lock.json.
 
 -- ──[ Startup Timer ]──────────────────────────────────────────────────────────
 -- Read back by the dashboard footer. Cheap enough to always leave on, and it
