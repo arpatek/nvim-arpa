@@ -5,7 +5,7 @@ stack a distro would pull in. Installs to `~/.config/nvim`; set `NVIM_APPNAME`
 to a different directory name to run it side by side with another config.
 
 ```
-~/.config/nvim-arpatek/
+~/.config/nvim/
 ├── init.lua                 entry point: timer, leader, module order
 ├── nvim-pack-lock.json           plugin revisions, written by vim.pack
 ├── lsp/                     one file per language server

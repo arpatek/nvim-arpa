@@ -12,7 +12,7 @@
 --
 --   1. yaml-language-server would receive the full text via didOpen, and its
 --      schemaStore option makes an outbound request while it is loaded.
---   2. 'undofile' persists the edit history to ~/.local/state/nvim-arpatek/undo/.
+--   2. 'undofile' persists the edit history to ~/.local/state/nvim/undo/.
 --      The temp file is deleted; the undo file is not.
 --   3. shada records marks and the jumplist, leaking the path at minimum.
 --

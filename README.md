@@ -1,4 +1,4 @@
-# nvim-arpatek
+# nvim-arpa
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -18,7 +18,7 @@
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Neovim](https://img.shields.io/badge/neovim-0.12%2B-green.svg)](https://neovim.io)
 
-**nvim-arpatek** is a Neovim configuration for Linux, DevOps and automation work
+**nvim-arpa** is a Neovim configuration for Linux, DevOps and automation work
 — Bash, Python, Terraform, Ansible, Puppet. It runs on Neovim's own plugin
 manager, LSP configuration and completion rather than the four plugins usually
 layered on top of them. Eight plugins, every one of which Neovim has no
@@ -64,7 +64,7 @@ than an error.
 ### Install
 
 ```sh
-git clone https://codeberg.org/arpatek/nvim-arpatek ~/.config/nvim
+git clone https://codeberg.org/arpatek/nvim-arpa ~/.config/nvim
 nvim
 ```
 
@@ -75,7 +75,7 @@ To try it without disturbing an existing config, clone it elsewhere and point
 `NVIM_APPNAME` at the directory name instead:
 
 ```sh
-git clone https://codeberg.org/arpatek/nvim-arpatek ~/.config/nvim-test
+git clone https://codeberg.org/arpatek/nvim-arpa ~/.config/nvim-test
 NVIM_APPNAME=nvim-test nvim
 ```
 
