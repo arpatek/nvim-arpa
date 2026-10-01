@@ -41,13 +41,28 @@ built-in answer for.
 
 ### Requires
 
-| | |
+| | Needed for |
 |---|---|
-| Neovim | 0.12+ (`vim.pack`, `vim.lsp.config`, `vim.lsp.completion`) |
-| Build | `tree-sitter-cli` — nvim-treesitter's `main` branch compiles parsers with it |
-| Search | `ripgrep`, `fd`, `fzf` |
-| Explorer | `yazi` |
-| Font | A Nerd Font **Mono** variant — the menu aligns on single-cell glyphs |
+| Neovim 0.12+ | `vim.pack`, `vim.lsp.config`, `vim.lsp.completion` |
+| `git` | `vim.pack` clones plugins with it |
+| `tree-sitter` CLI + a C compiler | nvim-treesitter's `main` branch builds every parser from source |
+| `ripgrep` | `:grep`, `grepprg`, and fzf-lua's live grep |
+| `fd`, `fzf` | fzf-lua's pickers |
+| `yazi` | the file explorer |
+| A Nerd Font **Mono** variant | the dashboard menu aligns on single-cell glyphs |
+
+On Homebrew that is `neovim tree-sitter-cli ripgrep fd fzf yazi`, plus
+`font-jetbrains-mono-nerd-font` and the Xcode command line tools for `cc`.
+
+Optional. Each of these degrades quietly rather than erroring:
+
+| | Without it |
+|---|---|
+| `bat` | fzf-lua previews lose syntax highlighting |
+| `lazygit` | `<leader>gg` opens an empty terminal |
+| `tofu` or `terraform` | no HCL formatting — `terraform-ls` advertises the capability but shells out to the CLI for it |
+| `python3` | `ansible-language-server` cannot resolve module paths |
+| a language server | that filetype gets no diagnostics or completion |
 
 Language servers and linters are declared in
 [`dotfiles/Brewfile`](https://codeberg.org/arpatek/dotfiles): `bash-language-server`,
@@ -55,9 +70,10 @@ Language servers and linters are declared in
 `lua-language-server`, `marksman`, `vscode-langservers-extracted`, plus `shellcheck`,
 `shfmt`, `stylua`, `hadolint`, `markdownlint-cli2` and `ansible-lint`.
 
-Nothing is required at runtime. `vim.lsp.enable` starts whatever is on `PATH` and
-silently skips what is not, so a missing server degrades to no diagnostics rather
-than an error.
+No language server is required. `vim.lsp.enable` starts whatever is on `PATH` and
+skips what is not, so a missing one costs you diagnostics rather than a startup
+error. `git` and `tree-sitter` are the exception — without them the first launch
+installs nothing.
 
 ---
 
